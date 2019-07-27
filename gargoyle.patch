@@ -1,0 +1,27 @@
+--- ./package/gargoyle/files/etc/config/gargoyle.old	2018-04-25 20:44:23.653270154 +0800
++++ ./package/gargoyle/files/etc/config/gargoyle	2018-04-25 20:48:57.961400690 +0800
+@@ -43,6 +43,7 @@
+ 	option system_reboot		'Reboot'
+ 	option system_about		'About'
+ 	option logout			'Logout'
++	option luci			'Luci'
+ 
+ config scripts scripts
+ 	option firewall_portforwarding	'port_forwarding.sh'
+@@ -73,6 +74,7 @@
+ 	option system_reboot		'reboot.sh'
+ 	option system_about		'about.sh'
+ 	option logout			'logout.sh'
++	option luci			'cgi-bin/luci'
+ 
+ config 300 firewall
+ 	option portforwarding	'100'
+@@ -109,6 +111,8 @@
+ 
+ config 500 logout
+ 
++config 600 luci
++
+ config bandwidth_display bandwidth_display
+ #	option time_frame "15m"
+ #	option plot1_type "total"
